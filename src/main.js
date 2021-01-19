@@ -5,8 +5,10 @@ import store from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import firebase from 'firebase/app'
+import BuyModalComponent from './components/Shared/BuyModal'
 
 Vue.use(Vuetify)
+Vue.component('app-buy-modal', BuyModalComponent)
 
 Vue.config.productionTip = false
 
@@ -35,5 +37,7 @@ new Vue({
         this.$store.dispatch('autoLoginUser', user)
       }
     })
+
+    this.$store.dispatch('fetchAds')
   }
 })

@@ -79,7 +79,7 @@
             this.$router.push('/')
           })
           .catch(() => {
-
+            this.$router.push('/login')
           })
         }
       }
